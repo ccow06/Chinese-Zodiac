@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Zodiac</title>
+    <script>
+      function checkYear() {
+        var year = document.getElementById("yearInput").value;
+        var zodiac = year % 12;
+        if (zodiac === 0) {
+          document.getElementById("pic").innerHTML = "<img src=\"rat.png\">"
+        } else if (zodiac === 1) {
+          document.getElementById("pic").innerHTML = "<img src=\"ox.png\">"
+        } else if (zodiac === 2) {
+          document.getElementById("pic").innerHTML = "<img src=\"tiger.png\">"
+        } else if (zodiac === 3) {
+          document.getElementById("pic").innerHTML = "<img src=\"rabbit.png\">"
+        } else if (zodiac === 4) {
+          document.getElementById("pic").innerHTML = "<img src=\"dragon.png\">"
+        } else if (zodiac === 5) {
+          document.getElementById("pic").innerHTML = "<img src=\"snake.png\">"
+        } else if (zodiac === 6) {
+          document.getElementById("pic").innerHTML = "<img src=\"horse.png\">"
+        } else if (zodiac === 7) {
+          document.getElementById("pic").innerHTML = "<img src=\"goat.png\">"
+        } else if (zodiac === 8) {
+          document.getElementById("pic").innerHTML = "<img src=\"monkey.png\">"
+        } else if (zodiac === 9) {
+          document.getElementById("pic").innerHTML = "<img src=\"rooster.png\">"
+        } else if (zodiac === 10) {
+          document.getElementById("pic").innerHTML = "<img src=\"dog.png\">"
+        } else if (zodiac === 11) {
+          document.getElementById("pic").innerHTML = "<img src=\"pig.png\">"
+        } else {
+          alert("Invalid Year Mate")
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-image: linear-gradient(90deg, #FFBB00, white, white, #FFBB00);
+      }
+      #body {
+        padding: 10px 100px 40px 100px;
+        margin: 0 350px;
+        border: 10px solid #FFBF00;
+        border-radius: 50px;
+        background-image: linear-gradient(to right, gold, orange);
+      }
+      #yearInput {
+        width: 310px;
+        margin: none;
+        min-height: 20px;
+        font-size: 25px;
+        text-align: center;
+        font-family: helvetica;
+      }
+      #yearButton {
+        background-color: gold;
+        border: 3px solid #FFFFAA;
+        border-radius: 15px;
+        font-family: georgia;
+        font-size: 20px;
+        outline: none;
+      }
+      img {
+        max-width: 350px;
+        max-height: 350px;
+      }
+      h2 {
+        color: darkblue;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div id="body">
+        <h2>Please enter your year of birth:</h2>
+        <input type="number" id="yearInput" placeholder="Enter year you were born."><br><br><br>
+        <input type="button" id="yearButton" value="Submit Year" onclick="checkYear()">
+      </div>
+      <span id="pic"></span>
+    </center>
+  </body>
+</html>
